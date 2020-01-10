@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Smart Car</title>
+
+	<meta name="description" content="Zeugnisverteilung">
+	<meta name="author" content="Franz Parzer">
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+	<!-- Printing and PDF exports -->
+	<script>
+
+			var reveal = document.createElement('link');
+			reveal.rel = 'stylesheet';
+			reveal.href = 'reveal.js/css/reveal.css';
+			reveal.onerror = function(){
+				reveal.href = 'https://courses.telematique.eu/reveal.js-plugins/reveal.js/css/reveal.css';
+			}
+			document.getElementsByTagName( 'head' )[0].appendChild( reveal );
+
+			var theme = document.createElement('link');
+			theme.rel = 'stylesheet';
+			theme.href = 'reveal.js/css/theme/zeugnis.css';
+			theme.id = 'theme';
+			theme.onerror = function(){
+				theme.href = 'https://courses.telematique.eu/reveal.js-plugins/reveal.js/css/theme/simple.css';
+			}
+			document.getElementsByTagName( 'head' )[0].appendChild( theme );
+
+			// Code syntax highlighting
+			var zenburn = document.createElement('link');
+			zenburn.rel = 'stylesheet';
+			zenburn.href = 'reveal.js/lib/css/zenburn.css';
+			zenburn.onerror = function(){
+				zenburn.href = 'https://courses.telematique.eu/reveal.js-plugins/reveal.js/lib/css/zenburn.css';
+			}
+			document.getElementsByTagName( 'head' )[0].appendChild( zenburn );
+
+			// Font awesome
+			var fontawesome = document.createElement('link');
+			fontawesome.rel = 'stylesheet';
+			fontawesome.href = 'reveal.js/plugin/menu/font-awesome/css/fontawesome.min.css';
+			// http://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css
+			fontawesome.onerror = function(){
+				fontawesome.href = 'https://courses.telematique.eu/reveal.js-plugins/reveal.js-plugins/menu//font-awesome-4.3.0/css/font-awesome.min.css';
+			}
+			document.getElementsByTagName( 'head' )[0].appendChild( fontawesome );
+
+			var print = document.createElement( 'link' );
+			print.rel = 'stylesheet';
+			print.type = 'text/css';
+			print.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+			print.onerror = function(){
+				print.href = window.location.search.match( /print-pdf/gi ) ? 'https://courses.telematique.eu/reveal.js-plugins/reveal.js/css/print/pdf.css' : 'https://courses.telematique.eu/reveal.js-plugins/reveal.js/css/print/paper.css';
+			}
+			document.getElementsByTagName( 'head' )[0].appendChild( print );
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<!-- Any section element inside of this container is displayed as a slide -->
+		<div class="slides" >
+			<section>
+				<section header="false" footer="false" data-background-image="img/Gaensemarsch4.jpg">
+					<h1>Smart Car</h1>
+					<h2>HTL Ober&ouml;sterreich</h2>
+					<h3>Franz Parzer</h3>
+					<h4>12. Februar 2020</h4>
+				</section>
+				<section>
+					<h3>Projektbeschreibung</h3>
+					<p>Um Digitalisierung zu visualisieren braucht es ein Vehikel. Dieser Umstand bringt nat&uuml;rlich ein Fahrzeug in den Fokus,
+					davon gibt es aber viele. Der besondere Umstand, dass Digitalisierung im
+					Wesentlichen eine Vernetzung aller betroffenen Teilnehmer bedeutet, hat als Konsequenz zur
+					Folge, dass es nicht nur ein Fahrzeug geben kann, sondern viele, die untereinander vernetzt sind.
+					Es bestand am Ende der Diskussion in der Mobilitätsgruppe der Konsens, ein Fahrzeug zu
+					entwerfen, das definierte Schnittstellen hat, und an verschiedenen Standorten von verschiedenen
+					Fachrichtungen entwickelt werden kann.<br>
+					Ziel ist es eine &quot;G&auml;nsefahrt&quot; der unterschiedlichen Fahrzeuge zu realisieren. Das erste wird
+					gesteuert, die restlichen fahren hintereinander her. Dabei ist vorstellbar, Logos, Buchstaben oder
+					ähnliches von den Fahrzeugen bewegen zu lassen, damit es in Summe ein gro&szlig;es Ganzes gibt.
+					Als Disziplinen seien nur einige als Beispiel genannt: der Maschinenbau kümmert sich an einem
+					Standort um das Chassis, an einem anderen um die Konstruktion der notwendigen Accessoires
+					um die Sensoren und Aktoren anbringen zu können. An einem dritten Standort wird die
+					Karosserie entwickelt. Dabei wurde festgehalten, dass Standardbauelemente zugekauft werden
+					k&ouml;nnen, aber der Fokus klar auf der Entwicklung, Konstruktion und Fertigung in der Schule im
+					Rahmen von Unterrichtsprojekten liegt.<br>
+					Schnittstellen müssen dann zur Leistungselektronik, Akkutechnologie für den Antrieb und zur
+					Informationstechnologie definiert werden. Ob die Kopplung der Fahrzeuge via Browser oder App
+					oder einen anderen Mechanismus passiert, ist zu definieren, die Parameter der Fahrzeuge
+					m&uuml;ssen auf jeden Fall erfasst und protokolliert werden.</p>
+					(Projektbeschreibung des Leiters des Projekts 1 Abteilungsvorstand DI Franz Parzer, HTL Steyr)
+				</section>
+			</section>
+			<section>
+				<section data-background-image="img/Auto3.jpg" data-background-opacity="0.1">
+					<h1>Features</h1>
+					<p><a href="#/RaspberryPi">Raspberry Pi</a><b> Version 3 oder 4 (WLAN, BT)</b></p>
+					<p class="fragment fade-in-then-semi-out"><a href="#/Leistungselektronik">Leistungselektronik</a></p>
+					<p class="fragment fade-in-then-semi-out"><a href="#/Akku">Akku</a></p>
+					<p class="fragment fade-in-then-semi-out">2-Rad oder <b><a href="#/Antrieb">4-Rad Antrieb</a></b></p>
+					<p class="fragment fade-in-then-semi-out">2-R&auml;der und ein St&uuml;tzrad oder <b><a href="#/Raeder">4-R&auml;der</a></b></p>
+					<p class="fragment fade-in-then-semi-out">mit oder <b><a href="#/Lenkung">ohne Lenkung</a></b></p>
+					<p class="fragment fade-in-then-semi-out">ohne oder <b><a href="#/Ultraschallabstandsmessung">mit Ultraschallabstandsmessung</a></b></p>
+					<p class="fragment fade-in-then-semi-out">mit oder <b><a href="#/LineFollower">ohne Line Follower</a></b></p>
+					<p class="fragment fade-in-then-semi-out">mit oder <b><a href="#/Raddrehzahlmessung">ohne Raddrehzahlmessung</a></b></p>
+					<p class="fragment fade-in-then-semi-out">ohne oder <b><a href="#/Kamera">mit Kamera</a></b></p>
+				</section>
+				<section id="RaspberryPi" data-background-image="img/RaspberryPi.jpg" data-background-opacity="0.3">
+					<h1><a href="https://www.raspberrypi.org/documentation/hardware/raspberrypi/mechanical/README.md">mechanical</a></h1>
+					<img class="stretch" data-src="img/RaspberryPiMechanical.png">
+				</section>
+				<section id="Leistungselektronik" data-background-image="img/Elektronik.png" data-background-opacity="0.3">
+					<h1>Leistungselektronik</h1>
+					<h3>mit zu viel Peripherie, aber bereits vorhanden (CAD: Eagle)</h3>
+					<img class="stretch" data-src="img/Elektronik.jpg">
+				</section>
+				<section id="Akku" data-background-image="img/Auto1.jpg" data-background-opacity="0.1">
+					<h1>Akku</h1>
+					<h3>Micro-USB f&uuml;r Raspberry Pi 3, USB-C Raspberry Pi 4</h3>
+					<img class="stretch" data-src="img/INTENSO_SlimS10000Powerbank10000mAh.png"><br>
+					<a href="https://www.mediamarkt.de/de/product/_intenso-slim-s10000-2036591.html">Media Markt</a>
+					praktisch mit dem kurzen Kabel
+				</section>
+				<section id="Antrieb" data-background-image="img/Auto1.jpg" data-background-opacity="0.1">
+					<h1><a href="https://www.amazon.de/s?k=Smart+Car+Getriebemotor+Arduino">Antrieb</a></h1>
+					<h2>ab 0,57&euro;</h2>
+					Bitte nicht selber fertigen!<br>
+					<img data-src="img/Getriebemotor.jpg">
+					<img data-src="img/GetriebemotorDimensions.jpg">
+				</section>
+				<section id="Raeder" data-background-image="img/Auto2.jpg" data-background-opacity="0.1">
+					<h1><a href="https://www.amazon.de/s?k=Arduino+DIY+Reifen+Rad">R&auml;der</a></h1>
+					<h2>ab 11,18&euro; f&uuml;r 6 R&auml;der mit Getriebemotor</h2>
+					Aber damit k&ouml;nnten wir uns &quot;unterscheiden&quot;, sind sehr sichtbar!<br>
+					<img class="stretch" data-src="img/Antriebsset.jpg"><br>
+				</section>
+				<section id="Lenkung" data-background-image="img/Auto2.jpg" data-background-opacity="0.1">
+					<h1>Lenkung</h1>
+					<h3>Eine &quot;echte&quot; Lenkung ist nat&uuml;rlich nett, aber konstruktiv aufw&auml;ndig.</h3>
+					<h4>Wir würden auch ein Servo brauchen!</h4>
+					<img class="stretch" data-src="img/Micro_servo.jpg"><br>
+				</section>
+				<section id="Ultraschallabstandsmessung" data-background-image="img/Auto4.jpg" data-background-opacity="0.1">
+					<h1>Ultraschallabstandsmessung</h1>
+					<h3>Ich habe mich bem&uuml;ht und ein Kernel Modul umgeschrieben (lassen &#x1F601;)</h3>
+					<img class="stretch" data-src="img/HC-SR04.jpg"><br>
+					Suchbegriff: <a href="https://www.google.com/search?q=HC-SR04">HC-SR04</a>
+				</section>
+				<section id="LineFollower" data-background-image="img/Auto2.jpg" data-background-opacity="0.1">
+					<h1>Line Follower</h1>
+					<h3>Ist - wenn &uuml;berhaupt - nur beim ersten Fahrzeug n&ouml;tig</h3>
+					<img class="stretch" data-src="img/LineFollower.jpg"><br>
+					Meiner ist von <a href="https://www.sunfounder.com/product-i2c-5-channel-line-follower-module.html">SunFounder</a>
+				</section>
+				<section id="Raddrehzahlmessung" data-background-image="img/Auto1.jpg" data-background-opacity="0.1">
+					<h1>Raddrehzahlmessung</h1>
+					<h3>ABS werden wir nicht einbauen, aber f&uuml;r die Datenerfassung eventuell brauchbar.</h3>
+					<img class="stretch" data-src="img/SlottedOpticalSwitch.jpg"><br>
+				</section>
+				<section id="Kamera" data-background-image="img/Auto1.jpg" data-background-opacity="0.1">
+					<h1>Kamera</h1>
+					<h3>Gute Erfahrungen haben wir mit der original Raspberry Pi Kamera gemacht (5MP).</h3>
+					<img data-src="img/pi-camera-attached.jpg">
+					<img data-src="img/CameraModule5MP.jpg">
+				</section>
+				<section data-background-image="img/Auto1.jpg" data-background-opacity="0.1">
+					<h1>Monitor (Display)</h1>
+					<h3>Die Smart Cars k&ouml;nnen sich &quot;aneinanderreihen&quot;, wenn eines den QR Code des Vordermannes nimmt und &quot;1&quot; dazuz&auml;hlt.</h3>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Anforderungen</h2>
+					<table>
+						<thead>
+							<tr>
+								<th></th>
+								<th>Promotion Car</th>
+								<th>Sch&uuml;lerfahrzeug</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Raspberry Pi</td>
+								<td>3 Model B+</td>
+								<td>3 Model B+</td>
+							</tr>
+							<tr>
+								<td>Leistungselektronik</td>
+								<td>HAT</td>
+								<td>HAT</td>
+							</tr>
+							<tr>
+								<td>Akku</td>
+								<td>Powerbank</td>
+								<td>?</td>
+							</tr>
+							<tr>
+								<td>Antrieb</td>
+								<td>4-Rad</td>
+								<td>4-Rad</td>
+							</tr>
+							<tr>
+								<td>R&auml;der</td>
+								<td>4</td>
+								<td>4</td>
+							</tr>
+							<tr>
+								<td>Lenkung</td>
+								<td>ohne</td>
+								<td>ohne</td>
+							</tr>
+							<tr>
+								<td>Ultraschallabstandsmessung</td>
+								<td>mit</td>
+								<td>ohne</td>
+							</tr>
+							<tr>
+								<td>LineFollower</td>
+								<td>ohne</td>
+								<td>ohne</td>
+							</tr>
+							<tr>
+								<td>Raddrehzahlmessung</td>
+								<td>mit</td>
+								<td>ohne</td>
+							</tr>
+							<tr>
+								<td>Kamera</td>
+								<td>mit</td>
+								<td>ohne</td>
+							</tr>
+							<tr>
+								<td>Monitor (Display)</td>
+								<td>mit</td>
+								<td>ohne</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+				<section>
+					<h1>Diskussion</h1>
+					<h2>Abstimmung</h2>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Arbeitspakete</h2>
+					<table>
+						<thead>
+							<tr>
+								<th>Thema</th>
+								<th>Standort</th>
+								<th>Ansprechpartner</th>
+								<th>Kontakt</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Elektronik</td>
+								<td>Steyr</td>
+								<td>Parzer</td>
+								<td><a href="mailto:Franz.Parzer@htl-steyr.ac.at?Subject=Smart%20Car" target="_top">Franz Parzer</a></td>
+							</tr>
+							<tr>
+								<td>R&auml;der</td>
+								<td></td>
+								<td></td>
+								<td><a href="mailto:xxx@xxx?Subject=Smart%20Car" target="_top">xxx</a></td>
+							</tr>
+							<tr>
+								<td>Chasis</td>
+								<td></td>
+								<td></td>
+								<td><a href="mailto:xxx@xxx?Subject=Smart%20Car" target="_top">xxx</a></td>
+							</tr>
+							<tr>
+								<td>Halterung Raspberry Pi</td>
+								<td></td>
+								<td></td>
+								<td><a href="mailto:xxx@xxx?Subject=Smart%20Car" target="_top">xxx</a></td>
+							</tr>
+							<tr>
+								<td>Halterung Kamera</td>
+								<td></td>
+								<td></td>
+								<td><a href="mailto:xxx@xxx?Subject=Smart%20Car" target="_top">xxx</a></td>
+							</tr>
+							<tr>
+								<td>Halterung Monitor (Display)</td>
+								<td></td>
+								<td></td>
+								<td><a href="mailto:xxx@xxx?Subject=Smart%20Car" target="_top">xxx</a></td>
+							</tr>
+							<tr>
+								<td>Halterung Akku</td>
+								<td></td>
+								<td></td>
+								<td><a href="mailto:xxx@xxx?Subject=Smart%20Car" target="_top">xxx</a></td>
+							</tr>
+							<tr>
+								<td>Halterung Ultraschallabstandsmessung</td>
+								<td></td>
+								<td></td>
+								<td><a href="mailto:xxx@xxx?Subject=Smart%20Car" target="_top">xxx</a></td>
+							</tr>
+							<tr>
+								<td>Karosserie</td>
+								<td></td>
+								<td></td>
+								<td><a href="mailto:xxx@xxx?Subject=Smart%20Car" target="_top">xxx</a></td>
+							</tr>
+							<tr>
+								<td>Software am Smart Car</td>
+								<td>Steyr</td>
+								<td>Parzer</td>
+								<td><a href="mailto:Franz.Parzer@htl-steyr.ac.at?Subject=Smart%20Car" target="_top">Franz Parzer</a></td>
+							</tr>
+							<tr>
+								<td>Software der &quot;Cloud&quot;</td>
+								<td></td>
+								<td></td>
+								<td><a href="mailto:xxx@xxx?Subject=Smart%20Car" target="_top">xxx</a></td>
+							</tr>
+						</tbody>
+					</table>	
+				</section>
+				<section>
+					<h2>Schnittstellen</h2>
+					<table>
+						<thead>
+							<tr>
+								<th>Bereich</th>
+								<th>Standort</th>
+								<th>Koordinator</th>
+								<th>Kontakt</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Elektronik</td>
+								<td>Steyr</td>
+								<td>Parzer</td>
+								<td><a href="mailto:Franz.Parzer@htl-steyr.ac.at?Subject=Smart%20Car" target="_top">Franz Parzer</a></td>
+							</tr>
+							<tr>
+								<td>Mechanik</td>
+								<td></td>
+								<td></td>
+								<td><a href="mailto:xxx@xxx?Subject=Smart%20Car" target="_top">xxx</a></td>
+							</tr>
+							<tr>
+								<td>Software am Smart Car</td>
+								<td>Steyr</td>
+								<td>Parzer</td>
+								<td><a href="mailto:Franz.Parzer@htl-steyr.ac.at?Subject=Smart%20Car" target="_top">Franz Parzer</a></td>
+							</tr>
+							<tr>
+								<td>Kommunikation der Smart Cars untereinander</td>
+								<td></td>
+								<td></td>
+								<td><a href="mailto:xxx@xxx?Subject=Smart%20Car" target="_top">xxx</a></td>
+							</tr>
+							<tr>
+								<td>Kommunikation mit der &quot;Cloud&quot;</td>
+								<td></td>
+								<td></td>
+								<td><a href="mailto:xxx@xxx?Subject=Smart%20Car" target="_top">xxx</a></td>
+							</tr>
+							<tr>
+								<td>Datenauswertung</td>
+								<td></td>
+								<td></td>
+								<td><a href="mailto:xxx@xxx?Subject=Smart%20Car" target="_top">xxx</a></td>
+							</tr>
+						</tbody>
+					</table>	
+				</section>
+			</section>
+			<section>
+				<h1>ToDo: Fertigung (was, wo, St&uuml;ckzahl)</h1>
+			</section>
+			<section>
+				<h1>Danke f&uuml;r die Mitarbeit!</h1>
+			</section>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="reveal.js/lib/js/head.min.js"></script>
+	<script type="text/javascript">
+		if (typeof head == 'undefined') {
+			document.write(unescape("%3Cscript src='https://courses.telematique.eu/reveal.js-plugins/reveal.js/lib/js/head.min.js' type='text/javascript'%3E%3C/script%3E"));
+		}
+	</script>
+	<script type="text/javascript" src="reveal.js/js/reveal.js"></script>
+	<script type="text/javascript">
+		if (typeof Reveal == 'undefined') {
+			document.write(unescape("%3Cscript src='https://courses.telematique.eu/reveal.js-plugins/reveal.js/js/reveal.js' type='text/javascript'%3E%3C/script%3E"));
+		}
+	</script>
+
+	<script>
+			// Full list of configuration options available here:
+			// http://github.com/hakimel/reveal.js#configuration
+			// ? for Shortcuts https://github.com/hakimel/reveal.js/wiki/Keyboard-Shortcuts
+			// b open and close your chalkboard
+			// left mouse button to write on the chalkboard
+			// right mouse button to wipe the chalkboard
+			// DEL key to clear the chalkboard
+			// c write comments and notes directly on the slide.
+			// d download notes in a JSON-file
+			if(reveal.href.startsWith('http://') || reveal.href.startsWith('https://')) {
+				var my_dependencies = [
+					{ src: 'https://courses.telematique.eu/reveal.js-plugins/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'https://courses.telematique.eu/reveal.js-plugins/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'https://courses.telematique.eu/reveal.js-plugins/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'https://courses.telematique.eu/reveal.js-plugins/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'https://courses.telematique.eu/reveal.js-plugins/reveal.js/plugin/search/search.js', async: true },
+					{ src: 'https://courses.telematique.eu/reveal.js-plugins/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'https://courses.telematique.eu/reveal.js-plugins/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'https://courses.telematique.eu/reveal.js-plugins/reveal.js-plugins/chalkboard/chalkboard.js'},
+					{ src: 'https://courses.telematique.eu/reveal.js-plugins/reveal.js-plugins/fullscreen/fullscreen.js' },
+					{ src: 'https://courses.telematique.eu/reveal.js-plugins/reveal.js-plugins/menu/menu.js' },
+				]
+			} else {
+				var my_dependencies = [
+					{ src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'reveal.js/plugin/search/search.js', async: true },
+					{ src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+					{ src: 'reveal.js/plugin/notes/notes.js', async: true },
+					{ src: 'reveal.js/plugin/chalkboard/chalkboard.js'},
+					{ src: 'reveal.js/plugin/fullscreen/fullscreen.js' },
+					{ src: 'reveal.js/plugin/master/master.js' },
+					{ src: 'reveal.js/plugin/menu/menu.js' }
+				]
+			}
+			Reveal.initialize({
+				controlsTutorial: false,
+				history: true,
+				width: 1920,
+				height: 1080,
+				mouseWheel: true,
+				preloadIframes: true,
+				previewLinks: true,
+				showSlideNumber: 'speaker',
+				menu: { // Menu works best with font-awesome installed: sudo apt-get install fonts-font-awesome
+						// https://github.com/denehyg/reveal.js-menu
+					themes: true,
+					themesPath: 'reveal.js/css/theme/',
+					transitions: true,
+				},
+				master: {
+					header: {
+						size:  '60%',
+						left:  'Smart Car',
+						right: '<img src="img/htl_logo.png" height="100px" />',
+					},
+					footer: {
+						size:  '40%',
+						left:  'Abteilung Elektronik und Technische Informatik / Informationstechnologie',
+						right:  '#{slideNumber} / #{slideCount}'
+					},
+				},
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // none/fade/slide/convex/concave/zoom
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: my_dependencies,
+				chalkboard: { // font-awesome.min.css must be available
+					src: "reveal.js/plugin/chalkboard/chalkboard.json",
+					toggleChalkboardButton: { left: "80px" },
+					toggleNotesButton: { left: "130px" },
+					background: [ 'rgba(127,127,127,.1)' , 'reveal.js/plugin/chalkboard/img/blackboard.png' ],
+				},
+				keyboard: {
+					67: function() { RevealChalkboard.toggleNotesCanvas() },	// toggle chalkboard when 'c' is pressed
+					66: function() { RevealChalkboard.toggleChalkboard() },	// toggle chalkboard when 'b' is pressed
+					46: function() { RevealChalkboard.clear() },	// clear chalkboard when 'DEL' is pressed
+					 8: function() { RevealChalkboard.reset() },	// reset all chalkboard data when 'BACKSPACE' is pressed
+					68: function() { RevealChalkboard.download() },	// downlad chalkboard drawing when 'd' is pressed
+					88: function() { RevealChalkboard.colorNext() },	// cycle colors forward when 'x' is pressed
+					89: function() { RevealChalkboard.colorPrev() },	// cycle colors backward when 'y' is pressed
+				},
+			});
+	</script>
+
+</body>
+</html>
